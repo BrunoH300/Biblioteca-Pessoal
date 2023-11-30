@@ -1,51 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+@import url(/css/style.css);
 /* Reset básico */
-body, h1, h2, h3, ul, li, a {
+
+* {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    color: #FFF;
+}
+body {
+    background: #000;
+     width: 100vw;
 }
 
 /* Estilização do header */
+
 header {
-    background-color: #333;
-    color: white;
-    padding: 1rem 0;
-    text-align: center;
-}
-
-header h1 {
-    margin-bottom: 0.5rem;
-}
-
-/* Estilização do menu */
-nav ul {
-    list-style-type: none;
     display: flex;
-    justify-content: center;
-    gap: 1rem;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px;
 }
 
-nav li {
-    display: inline;
+header nav a {
+    padding: 20px;
+    transition: .5s;
+}
+header nav {
+    padding-left: 30px;
 }
 
-nav a {
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+header a:hover {
+    background: #aaaaaa3b;
+    border-radius: 20px;
+    padding: 10px;
+    scale: 1.1;
+    color: #ff0;
+
+}
+/* Estilização do menu */
+main {
+    text-align: center;
+    height: calc(100vh - 104px);
+   
+    padding-inline: 200px;
+}
+.livros-home {
+    display: flex;
+}
+.livros-home img {
+    width: 128px;
+
+}
+main .livros-home {
+    justify-content: start;
+}
+main .livros-home:nth-of-type(3){
+    justify-content: end;
 }
 
-nav a:hover {
-    background-color: #555;
+h1 {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 100px;
+    text-align: left;
+    color: #ff0;
+}
+main p {
+    color: #ff0;
+    text-align: end;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 100px;
 }
 
 /* Estilo do conteúdo principal */
-main {
-    padding: 2rem;
-}
 
+.livro-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 /* Estilo para ocultar elementos */
 .hidden {
     display: none;
@@ -65,53 +101,75 @@ main {
 }
 
 #bookPopup form {
-    background: #fff;
+    background: #ff0;
     padding: 2rem;
     border-radius: 10px;
-    width: 80%;
+    width: 100%;
     max-width: 500px;  /* largura máxima */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
+#bookPopup form div {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
 #bookPopup h3 {
+    color: #000;
     margin-bottom: 1rem;
+}
+#bookPopup input {
+    background: #FFF;
+    color: #000;
+    padding-left: 10px;
+}
+#bookPopup input::placeholder {
+    color: #000;
 }
 
 #bookPopup input[type="text"],
 #bookPopup input[type="date"],
+#bookPopup input[type="tel"],
+select,
 #bookPopup button {
     width: 100%;
     margin-bottom: 1rem;
-    padding: 0.5rem;
+    padding-block: 0.5rem;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 10px;
+}
+select {
+    color: #000;
 }
 
 #bookPopup button[type="submit"] {
-    background: #007BFF;
+    background: #000;
     color: #fff;
     cursor: pointer;
     transition: background-color 0.3s;
+    border: none;
 }
 
 #bookPopup button[type="submit"]:hover {
     background: #0056b3;
+
 }
 
 #bookPopup #closePopupBtn {
-    background: #ccc;
+    background: #FFF;
     cursor: pointer;
+    border: none;
+    color: #000;
 }
 
 #bookPopup #closePopupBtn:hover {
-    background: #aaa;
+    opacity: .5;
 }
 
 .icon-btn {
     background: none;
     border: none;
     cursor: pointer;
-    color: #007BFF; /* Cor do ícone */
+    color: #FF0; /* Cor do ícone */
     font-size: 1.2rem; /* Tamanho do ícone */
     transition: color 0.3s;
 }
@@ -127,4 +185,8 @@ main {
 
 .icon-btn.delete:hover {
     color: #b02130; /* Cor vermelha ao passar o mouse */
+}
+
+main td {
+    text-align: center;
 }

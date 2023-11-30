@@ -11,25 +11,29 @@
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/livros.html">Livros</a></li>
-                <!-- Outras páginas podem ser adicionadas aqui -->
-            </ul>
+            <a href="/livros.html">Livros</a>
+            <a href="/autores.html">Autores</a>
+            <a href="/editora.html">Editoras</a>   
         </nav>
-        <h1>Minha Biblioteca</h1>
-    </header>
+    </header> 
 
     <main>
-        <section>
-            <h2>Bem-vindo à Minha Biblioteca</h2>
-            <p>Uma aplicação simples para gerenciar sua coleção de livros pessoais.</p>
-        </section>
+        <div class="livros-home first">
+            <img src="https://cdn-icons-png.flaticon.com/512/167/167756.png" alt="">
+        </div>
+        <div class="text-h1">
+            <h1>Hello, this is <br> </h1>
+            <p>my personal library</p>
+        </div>
+        <div class="livros-home second">
+            <img src="https://cdn-icons-png.flaticon.com/512/167/167756.png" alt="">
+        </div>
     </main>
 
-    <footer>
-        <p>&copy; 2023 Minha Biblioteca</p>
-    </footer>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="/js/home.js">
+        ScrollReveal({ reset: true });
+    </script>
 </body>
 
 </html>

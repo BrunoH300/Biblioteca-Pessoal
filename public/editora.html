@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Livros - Biblioteca Pessoal</title>
+    <title>Editoras - Biblioteca Pessoal</title>
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" />
-    
+
 </head>
 
 <body>
@@ -16,6 +16,7 @@
             <a href="/livros.html">Livros</a>
             <a href="/autores.html">Autores</a>
             <a href="/editora.html">Editoras</a>   
+        </nav>
     </header>
 
     <main>
@@ -23,21 +24,20 @@
             <img src="https://cdn-icons-png.flaticon.com/512/167/167756.png" alt="">
         </div>
         <div class="livro-main">
-            <h1>Lista de Livros</h1>
+            <h1>Lista de Editoras</h1>
         <button class="icon-btn" id="addBookBtn">
             <i class="fas fa-plus"></i> Adicionar
         </button>
             <table>
                 <thead>
                     <tr>
-                        <th>Título</th>
-                        <th>Autor</th>
-                        <th>Editora</th>
-                        <th>Data de Publicação</th>
+                        <th>Nome</th>
+                        <th>Endereço</th>
+                        <th>Telefone</th>
                         <th>Ações</th>
                     </tr>
                 </thead>
-                <tbody id="listaLivros"></tbody>
+                <tbody id="listaEditoras"></tbody>
             </table>
         </div>
         <div class="livros-home second">
@@ -48,31 +48,16 @@
     <!-- Popup para Adicionar/Atualizar Livro -->
     <div id="bookPopup" class="hidden">
         <form id="bookForm">
-            <h3>Adicionar/Atualizar Livro</h3>
-            <input type="hidden" id="id_livro">
-            <input type="text" id="titulo" placeholder="Título" required>
-            <div>
-                
-                <select id="autor" required>
-                  <option value="">Selecione um autor</option>
-                  <!-- Opções de autores serão adicionadas aqui -->
-                </select>
-              </div>
-              <div>
-                <select id="editora" required>
-                  <option value="">Selecione uma editora</option>
-                  <!-- Opções de editoras serão adicionadas aqui -->
-                </select>
-              </div>
-              
-              
-            <input type="date" id="dataPublicacao" placeholder="Data de Publicação" required>
+            <h3>Adicionar/Atualizar Editora</h3>
+            <input type="hidden" id="id_editora">
+            <input type="text" id="nome" placeholder="Nome" required>
+            <input type="text" id="endereco" placeholder="Endereço" required>
+            <input type="tel" id="telefone" placeholder="Telefone" required>
             <button type="submit">Salvar</button>
             <button type="button" id="closePopupBtn">Fechar</button>
         </form>
     </div>
-
-    <script src="/js/livros.js" ></script>
+    <script src="/js/editoras.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="/js/home.js">
         ScrollReveal({ reset: true });
